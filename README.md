@@ -18,9 +18,9 @@ Given two functions:
 
 ```c
 int addone(int x);
-int x2(int x);```
+int x2(int x);
 
-
+```
 The engine synthesizes a new function at runtime equivalent to:
 
 int composed(int x) {
@@ -40,7 +40,7 @@ Instead of calling functions normally, it:
 
 ### 1️⃣ Machine Code Extraction
 
-* Scans function memory until RET (0xC3)
+* Scans function memory until RET (`0xC3`)
 
 * Copies instruction bytes into a buffer
 
@@ -54,7 +54,9 @@ mmap(NULL, size, PROT_READ | PROT_WRITE | PROT_EXEC, ...)
 [f1 machine code] → [register bridge] → [f2 machine code]
 
 ### 4️⃣ Invocation
+```
 ret.call = (int (*)(int)) fun;
+```
 
 ## 🛠 Build & Run
 gcc -Wall -Wextra -O2 src/composer.c examples/basic_example.c -o compose
