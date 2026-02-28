@@ -22,11 +22,11 @@ int x2(int x);
 
 ```
 The engine synthesizes a new function at runtime equivalent to:
-
+```
 int composed(int x) {
     return x2(addone(x));
 }
-
+```
 Instead of calling functions normally, it:
 
 1. Extracts raw machine code from both functions
