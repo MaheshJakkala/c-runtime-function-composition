@@ -18,7 +18,7 @@ Given two functions:
 
 ```c
 int addone(int x);
-int x2(int x);
+int x2(int x);```
 
 
 The engine synthesizes a new function at runtime equivalent to:
