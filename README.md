@@ -45,9 +45,10 @@ Instead of calling functions normally, it:
 * Copies instruction bytes into a buffer
 
 ### 2️⃣ Executable Memory Allocation
+```
 
 mmap(NULL, size, PROT_READ | PROT_WRITE | PROT_EXEC, ...)
-
+```
 * Enables runtime execution of synthesized code
 
 ### 3️⃣ Binary Stitching
